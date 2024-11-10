@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  back-end-service:
+    build:
+      context: ./../back-end-service
+      dockerfile: ./../back-end-service/back-end-service.dockerfile
+    restart: always
+    ports:
+      - "8080:8080"
+    deploy:
+      mode: replicated
+      replicas: 1
