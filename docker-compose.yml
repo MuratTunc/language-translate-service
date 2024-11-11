@@ -1,14 +1,10 @@
-version: '3'
-
+version: '2'
 services:
-
-  back-end-service:
-    build:
-      context: ./../back-end-service
-      dockerfile: ./../back-end-service/back-end-service.dockerfile
+  go-web-app:
     restart: always
-    ports:
-      - "8080:8080"
-    deploy:
-      mode: replicated
-      replicas: 1
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - VIRTUAL_HOST=143.198.157.18
+      - LETSENCRYPT_HOST=143.198.157.18
