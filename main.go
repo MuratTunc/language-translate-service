@@ -75,6 +75,6 @@ func main() {
 
 	c := cors.Default().Handler(mux)
 
-	fmt.Println("Starting server on http://serverip:8000")
+	fmt.Println("Starting server on http://serverip:80")
 	log.Fatal(http.ListenAndServe(":80", c))
 }

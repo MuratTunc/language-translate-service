@@ -7,4 +7,4 @@ services:
       context: .
     environment:
       - VIRTUAL_HOST=143.198.157.18
-      - LETSENCRYPT_HOST=143.198.157.18
+      - LETSENCRYPT_HOST=
